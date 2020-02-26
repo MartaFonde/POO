@@ -5,11 +5,21 @@ public class Poligono extends Figura{
     Scanner sc=new Scanner(System.in);
     public Punto[] puntos;
 
+    /**
+     * Inicializa las propiedades nombre, punto de origen. 
+     * Declara, con un tamaño, el array puntos.
+     * @param nombre nombre
+     * @param origen punto origen
+     * @param cantPuntos tamaño array puntos
+     */
     public Poligono(String nombre, Punto origen, int cantPuntos){
         super(origen, nombre);
         this.puntos=new Punto[cantPuntos];
     }
 
+    /**
+     * Inicializa un polígono "triángulo" con unos puntos 
+     */
     public Poligono(){
         this("triángulo", new Punto(2.5,2.5), 3);
         this.puntos[0]=new Punto(0,0);
@@ -17,6 +27,9 @@ public class Poligono extends Figura{
         this.puntos[2]=new Punto(2.5,5);
     }
 
+    /**
+     * Pide nombre, punto de origen y puntos del polígono al usuario
+     */
     @Override
     public void pedirDatos(){
         super.pedirDatos();
@@ -28,6 +41,9 @@ public class Poligono extends Figura{
         }
     }
 
+    /**
+     * Muestra el nombre, punto de origen y los puntos del polígono
+     */
     @Override
     public void mostrarDatos(){
         super.mostrarDatos();
